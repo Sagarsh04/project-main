@@ -1,0 +1,126 @@
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Flask with Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <main>
+    <script src="speech.js"></script>
+    <h1>Baking with the Gemini API</h1>
+    <form>
+      <div class="image-picker">
+        <label class="image-choice">
+          <input type="radio" checked name="chosen-image" value="/baked_goods_1.jpg">
+          <img src="/baked_goods_1.jpg">
+        </label>
+        <label class="image-choice">
+          <input type="radio" name="chosen-image" value="/baked_goods_2.jpg">
+          <img src="/baked_goods_2.jpg">
+        </label>
+        <label class="image-choice">
+          <input type="radio" name="chosen-image" value="/baked_goods_3.jpg">
+          <img src="/baked_goods_3.jpg">
+        </label>
+      </div>
+      <div class="prompt-box">
+        <label>
+          <input name="prompt" placeholder="Enter instructions here" type="text"
+            value="Provide a recipe for the baked goods in the image">
+        </label>
+        <div class="container mt-5">
+          <h1 class="text-center mb-4">Speech to Flask with Bootstrap</h1>
+          <div class="row justify-content-center">
+              <div class="col-md-6">
+                  <button class="btn btn-primary btn-block mb-3" onclick="startRecognition()">Start Recognition</button>
+                  <button class="btn btn-danger btn-block" id="stop-btn" disabled onclick="stopRecognition()">Stop Recognition</button>
+                  <p class="lead mt-3" id="transcript"></p>
+              </div>
+          </div>
+      </div>
+        <button type="submit">Go</button>
+      </div>
+    </form>
+    <p class="output">(Results will appear here)</p>
+  </main>
+
+  <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>
+  <script src="https://unpkg.com/base64-js@1.3.0/base64js.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baking with the Gemini API</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <main>
+    <h1>Baking with the Gemini API</h1>
+    <!-- <div class="speech-recognition-box">
+        <button class="btn btn-primary" onclick="startRecognition()">
+          Speak
+        </button>
+        <button
+          class="btn btn-danger"
+          id="stop-btn"
+          disabled
+          onclick="stopRecognition()"
+        >
+          Stop
+        </button>
+        <p class="lead mt-3" id="transcript"></p>
+      </div> -->
+    <form>
+      <div class="image-picker">
+        <label class="image-choice">
+          <input type="radio" checked name="chosen-image" value="/baked_goods_1.jpg" />
+          <img src="/baked_goods_1.jpg" />
+        </label>
+        <label class="image-choice">
+          <input type="radio" name="chosen-image" value="/baked_goods_2.jpg" />
+          <img src="/baked_goods_2.jpg" />
+        </label>
+        <label class="image-choice">
+          <input type="radio" name="chosen-image" value="/baked_goods_3.jpg" />
+          <img src="/baked_goods_3.jpg" />
+        </label>
+      </div>
+      <div class="prompt-box">
+        <label>
+          <input id="prompt-input" name="prompt" placeholder="Enter instructions here" type="text"
+            value="Provide a recipe for the baked goods in the image" />
+        </label>
+        <button type="submit">Go</button>
+        <button type="button" class="btn btn-primary" id="rec" onclick="toggleRecognition()">
+          Speak
+        </button>
+        <button type="button" class="btn btn-danger" id="stop-btn" disabled onclick="stopRecognition()">
+          Stop
+        </button>
+        <!-- <button type="button" onclick="setPromptFromSpeech()">
+          Set Prompt from Speech
+        </button> -->
+      </div>
+    </form>
+    <p class="output">(Results will appear here)</p>
+  </main>
+  <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>
+  <script src="https://unpkg.com/base64-js@1.3.0/base64js.min.js"></script>
+  <script type="module" src="/main.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
